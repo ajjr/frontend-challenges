@@ -1,2 +1,2 @@
 # frontend-challenges
-Hobbyish front-end challenges for fun
+Hobbyish frontend challenges for fun
