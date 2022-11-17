@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    color: var(--LightGrey);
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+
+button {
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    padding: 2%;
+    margin-top: 5%;
+}
+button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+h1 {
+    color: var(--White);
+}
+
+.card {
+    max-width: 300px;
+    /* background-color: var(--DarkBlue); */
+    background: rgb(37,45,55);
+    background: linear-gradient(180deg, rgba(37,45,55,1) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 10%;
+    padding: 5%;
+}
+
+.circle-block {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 24px;
+    width: 24px;
+    padding: 10px;
+    background: var(--MediumGrey);
+    color: var(--LightGrey);
+    border: none;
+    text-align: center;
+  }
+.circle:hover {
+    background: var(--Orange);
+    color: var(--White);
+}
+
+.highlight-orange {
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 24px;
+    width: 24px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    background: var(--MediumGrey);
+}
