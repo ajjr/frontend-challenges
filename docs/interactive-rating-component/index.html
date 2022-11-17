@@ -16,9 +16,9 @@
   <!-- Rating state start -->
   <div class="card">
     <span id="front-face">
-      <span class="highlight-orange">
-      <img src="./images/icon-star.svg" alt="">
-    </span>
+      <span class="star-orange">
+        <img src="./images/icon-star.svg" align="bottom" alt="" style=" max-height: 100%; max-width: 100%;">
+      </span>
       <h1>How did we do?</h1>
       <p>Please let us know how we did with your support request. All feedback is appreciated 
       to help us improve our offering!</p> 
@@ -29,18 +29,22 @@
         <span class="circle">4</span>
         <span class="circle">5</span>
       </div>
-      <div><button type="submit">Submit</button> 
+      <div class="submit-block">
+        <button type="submit" id="submit" disabled>SUBMIT</button> 
       </div>
     </span> <!-- Rating state end -->   
-    <span id="thankyou" hidden> <!-- Thank you state start -->
-
-      <p>
-        You selected <span class="selection"></span><!-- Add rating here --> out of 5
-      </p> 
-      <p>Thank you!</p>  
-      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!</p>
-
+    <span id="thankyou" style="display: none;"> <!-- Thank you state start -->
+      <div class="thankyou-content">
+        <img src="./images/illustration-thank-you.svg" alt="">
+      </div>
+      <div class="thankyou-ack">
+        You selected <span id="display-selection"></span><!-- Add rating here --> out of 5
+      </div>
+<!--       <div class="thankyou-note"> -->
+        <h1 class="thankyou">Thank you!</h1>  
+        <p class="thankyou">We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+<!--       </div>   -->
     <!-- Thank you state end -->
     </span>
   </div>
