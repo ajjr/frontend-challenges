@@ -119,12 +119,12 @@ span#thankyou {
 .thankyou-ack {
     font-family: inherit;
     font-size: inherit;
-    width: 96%;
+    width: 94%;
     border-radius: 30px;
     border: none;
     background-color: var(--DarkBlue);
     color: var(--Orange);
-    padding: 2%;
+    padding: 3%;
     margin-top: 5%;
     text-align: center;
 }
