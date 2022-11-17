@@ -42,7 +42,7 @@ h1 {
 }
 
 .card {
-    max-width: 300px;
+    max-width: 400px;
     /* background-color: var(--DarkBlue); */
     background: rgb(37,45,55);
     background: linear-gradient(180deg, rgba(37,45,55,1) 0%, rgba(0,0,0,1) 100%);
@@ -63,7 +63,7 @@ h1 {
     line-height: 24px;
     width: 24px;
     padding: 10px;
-    background: var(--MediumGrey);
+    background: var(--DarkBlue);
     color: var(--LightGrey);
     border: none;
     text-align: center;
