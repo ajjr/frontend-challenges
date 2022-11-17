@@ -20,10 +20,12 @@
     <div class="logo-area">
       <img src="./assets/images/logo.svg" alt="W.">
     </div>
-    <ul class="header-panel">
+
+    <img src="./assets/images/icon-menu-close.svg" alt="Close Menu" class="header-menu-close-icon">
+    <ul class="header-menu header-menu-panel">
       <li class="header-li">
         <a href="#">
-        Home
+        Home 
         </a>
       </li>
       <li class="header-li">
@@ -47,37 +49,14 @@
         </a>
       </li>
     </ul>
-    <div class="header-menu">
-      <img src="./assets/images/icon-menu.svg" alt="Menu">
-      <ul class="mobile-menu mobile-menu-off">
-        <li class="close-menu"><img src="./assets/images/icon-menu-close.svg" alt="Close Menu"></li>
-        <li class="header-li">
-          <a href="#">
-            Home
-          </a>
-        </li>
-        <li class="header-li">
-          <a href="#">
-            New
-          </a>
-        </li>
-        <li class="header-li">
-          <a href="#">
-            Popular
-          </a>
-        </li>
-        <li class="header-li">
-          <a href="#">
-            Trending
-          </a>
-        </li>
-        <li class="header-li">
-          <a href="#">
-            Categories
-          </a>
-        </li>
-      </ul>
-    </div>  
+
+    <img src="./assets/images/icon-menu.svg" alt="Menu" class="header-menu-icon">
+
+    
+ 
+   
+
+
   </header>
   <main>
     <div class="container">
@@ -153,17 +132,28 @@
 </main>
 <script>
   let menuStatus = false;
-  document.querySelector('.header-menu').addEventListener('click', e => {
-    if (menuStatus) {
-      menuStatus = false;
-        document.querySelector('.mobile-menu').classList.add('mobile-menu-off');
-        document.querySelector('.mobile-menu').classList.remove('mobile-menu-on');
-    } else {
-      menuStatus = true;
-      document.querySelector('.mobile-menu').classList.add('mobile-menu-on');
-      document.querySelector('.mobile-menu').classList.remove('mobile-menu-off');
-    }
+  const headerMenu = document.querySelector('.header-menu');
+  const headerMenuIcon = document.querySelector('.header-menu-icon')
+  const headerMenuCloseIcon = document.querySelector('.header-menu-close-icon');
+
+  const menuCloseEventListener = function(e) {
+    headerMenu.classList.add('header-menu-panel');
+    headerMenu.classList.remove('mobile-menu-on');
+    headerMenuCloseIcon.classList.remove('header-menu-close-icon-on');
+    headerMenuIcon.classList.remove('display-none');
+    headerMenuCloseIcon.removeEventListener('click', menuCloseEventListener);
+  }
+
+  headerMenuIcon.addEventListener('click', e => {
+    headerMenu.classList.add('mobile-menu-on');
+    headerMenu.classList.remove('header-menu-panel'); 
+    headerMenuCloseIcon.classList.add('header-menu-close-icon-on');
+    headerMenuIcon.classList.add('display-none');
+
+    headerMenuCloseIcon.addEventListener('click', menuCloseEventListener);
   });
+  
+
 </script>
 <footer>
   <div class="attribution">
