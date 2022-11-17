@@ -61,7 +61,8 @@ p.thankyou {
     /* background-color: var(--DarkBlue); */
     /* background: rgb(37,45,55); */
     /* background: linear-gradient(180deg, rgba(18,20,23,1) 0%, rgba(37,45,55,1) 100%); */
-    background: linear-gradient(45deg, rgb(20, 30, 40, 1) 0%, rgba(37,45,55,1) 100%);
+    /* background: linear-gradient(45deg, rgb(20, 30, 40, 1) 0%, rgba(37,45,55,1) 100%); */
+    background: radial-gradient(circle at top , rgba(37,45,55,1) 0%, rgb(20, 28, 36, 1) 100%);
     border-radius: 10%;
     padding: 5%;
     margin: 5%;
