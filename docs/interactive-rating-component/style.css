@@ -58,6 +58,7 @@ p.thankyou {
 
 .card {
     max-width: 400px;
+    height: 50vh;
     /* background-color: var(--DarkBlue); */
     /* background: rgb(37,45,55); */
     /* background: linear-gradient(180deg, rgba(18,20,23,1) 0%, rgba(37,45,55,1) 100%); */
@@ -118,7 +119,7 @@ span#thankyou {
 .thankyou-ack {
     font-family: inherit;
     font-size: inherit;
-    width: 100%;
+    width: 96%;
     border-radius: 30px;
     border: none;
     background-color: var(--DarkBlue);
@@ -131,11 +132,7 @@ span#thankyou {
 .thankyou-note {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
-}
-
-.thankyou-content {
-    max-width: 200px;
-    margin: auto;
+    height: 50vh;
 }

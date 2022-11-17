@@ -13,13 +13,13 @@ let selectedRating;
 
 /* Interactive elements */
 
-const ratingCard = document.querySelector('.card');
 const circleBlock = document.querySelector('.circle-block');
 const submitBlock = document.querySelector('.submit-block');
 const ratingCircles = document.querySelectorAll('.circle');
 const submitButton = document.querySelector('#submit');
 const frontFace = document.querySelector('#front-face');
 const thankYou = document.querySelector('#thankyou');
+const displaySelection = document.getElementById('display-selection')
 
 /* Event listeners */
 
@@ -33,7 +33,6 @@ circleBlock.addEventListener('click', e => {
 submitBlock.addEventListener('click', e => {
   const elem = e.target;
   if (elem.id === 'submit') {
-    console.log(selectedRating);
     submitRating();
   }
 });
@@ -49,7 +48,7 @@ ratingCircles.forEach(elem => {
 
 ratingCircles.forEach(elem => {
   elem.addEventListener('mouseleave', e => {
-    if (e.target.textContent != selectedRating) { 
+    if (e.target.textContent != selectedRating) {
       e.target.style.background = selectorBackground;
       e.target.style.color = selectorColor;
     }
@@ -59,6 +58,12 @@ ratingCircles.forEach(elem => {
 /* DOM manipulation functions */
 
 function selectRating(elem) {
+  /** 
+   * Update selected rating and prepare DOM for rating submission.
+   * 
+   * @elem DOM Element with circle class.
+   * */ 
+   
 
   ratingCircles.forEach(e => {
     if (elem === e) {
@@ -80,15 +85,11 @@ function selectRating(elem) {
   });
 }
 
-function createStyle(css) {
-  const style = document.createElement('style');
-  style.appendChild(document.createTextNode(css));
-  return style;
-} 
-
-
 function submitRating() {
-  document.getElementById('display-selection').textContent = selectedRating;
+  /**
+   * Switch to thank you state.
+   */
+  displaySelection.textContent = selectedRating;
   frontFace.style.display = 'none';
   thankYou.style.display = 'block';
 }
