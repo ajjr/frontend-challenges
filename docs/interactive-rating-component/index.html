@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+<main>
+  <!-- Rating state start -->
+  <div class="card">
+    <span id="front-face">
+      <span class="star-orange">
+        <img src="./images/icon-star.svg" align="bottom" alt="" style=" max-height: 100%; max-width: 100%;">
+      </span>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p> 
+      <div class="circle-block">
+        <span class="circle">1</span>
+        <span class="circle">2</span>
+        <span class="circle">3</span>
+        <span class="circle">4</span>
+        <span class="circle">5</span>
+      </div>
+      <div class="submit-block">
+        <button type="submit" id="submit" disabled>SUBMIT</button> 
+      </div>
+    </span> <!-- Rating state end -->   
+    <span id="thankyou" style="display: none;"> <!-- Thank you state start -->
+      <div class="thankyou-note">
+      <div class="thankyou-content">
+        <img src="./images/illustration-thank-you.svg" alt="">
+      </div>
+     
+        <div class="thankyou-ack">
+          You selected <span id="display-selection"></span><!-- Add rating here --> out of 5
+        </div>
+        <h1 class="thankyou">Thank you!</h1>  
+        <p class="thankyou">We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>  
+    <!-- Thank you state end -->
+    </span>
+  </div>
+
+<script src="./main.js"></script>
+</main>
+</body>
+</html>
