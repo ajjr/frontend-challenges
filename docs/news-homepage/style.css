@@ -71,6 +71,7 @@ hr.last-element {
 }
 .header-menu-icon {
     justify-self: end;
+    cursor: pointer;
 }
 .header-menu-close-icon {
     display: none;
